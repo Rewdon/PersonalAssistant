@@ -1,0 +1,99 @@
+/* src/index.css */
+:root {
+  /* Paleta kolorów - Dark Mode */
+  --bg-primary: #121212;   /* Głęboka czerń */
+  --bg-secondary: #1e1e1e; /* Ciemnoszary dla kart/paneli */
+  --text-main: #e0e0e0;    /* Jasny szary (nie czysta biel, bo też razi) */
+  --text-muted: #a0a0a0;
+  --accent: #646cff;       /* Fiolet - Twój kolor główny */
+  --accent-hover: #535bf2;
+  --danger: #ff4d4f;
+  
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Stylizacja kontenerów */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Karty (np. zadania, panele) */
+.card {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+}
+
+/* Przyciski */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--accent);
+  background-color: #2a2a2a;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Przyciski główne (CTA) */
+button.primary {
+  background-color: var(--accent);
+  color: white;
+}
+button.primary:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Inputy */
+input, textarea, select {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: var(--text-main);
+  padding: 0.6rem;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box; /* Żeby padding nie psuł szerokości */
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
